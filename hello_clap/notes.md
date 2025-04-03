@@ -6,5 +6,6 @@ cargo new hello_world
 # run package
 cargo run -p hello_world
 ```
-# cli parsing with clap
-- 
+# quest
+- learn positional arguments
+- use external mod and import parse on the main file
