@@ -7,5 +7,5 @@ cargo new hello_world
 cargo run -p hello_world
 ```
 # quest
-- learn positional arguments
+- can specify positional arguments with `#[arg(index = 1)]`
 - use external mod and import parse on the main file
