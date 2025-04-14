@@ -1,22 +1,31 @@
+use anyhow::{Context, Result};
 use clap::Parser;
+use log::{info, warn};
 
 /// Simple program to greet a person
 #[derive(Parser, Debug)]
 struct Cli {
-    name: Option<String>,
+    /// The pattern to look for
+    pattern: String,
+    /// The path to the file to read
+    path: std::path::PathBuf,
 }
 
-fn main() {
-    let cli = Cli::parse();
+// main program
+fn main() -> Result<()> {
+    // parsing arguments with clap
+    let args = Cli::parse();
+    // reading path argument and error handling with anyhow (with_context)
+    let content = std::fs::read_to_string(&args.path)
+        .with_context(|| format!("could not read file `{}`", args.path.display()))?;
 
-    // print value from inputs
-    if let Some(arg_from_cli) = cli.name {
-        println!("you're ... {arg_from_cli}");
+    // checks lines that contain the argument
+    for line in content.lines() {
+        if line.contains(&args.pattern) {
+            println!("{}", line);
+        }
     }
 
-    // match has better error handling but i'm not interested in None Option
-    // match cli.name {
-    //     Some(name) => println!("you're ... {name}!!"),
-    //     None => println!("no value was provided"),
-    // }
+    // returning success?
+    Ok(())
 }
