@@ -1,6 +1,5 @@
 use anyhow::{Context, Result};
 use clap::Parser;
-use log::{info, warn};
 
 /// Simple program to greet a person
 #[derive(Parser, Debug)]
