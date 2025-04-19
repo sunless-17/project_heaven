@@ -1,0 +1,9 @@
+/home/sunless/alchemy/darkness/practice_limbo/target/debug/deps/libstructs1-ef756f8c642c44c4.rmeta: exercises/07_structs/structs1.rs Cargo.toml
+
+/home/sunless/alchemy/darkness/practice_limbo/target/debug/deps/structs1-ef756f8c642c44c4.d: exercises/07_structs/structs1.rs Cargo.toml
+
+exercises/07_structs/structs1.rs:
+Cargo.toml:
+
+# env-dep:CLIPPY_ARGS=
+# env-dep:CLIPPY_CONF_DIR
