@@ -1,6 +1,6 @@
 [workspace]
 resolver = "2"
-members = ["largest_number"]
+members = ["largest_number", "rust_ritual"]
 
 [workspace.dependencies]
 clap = { version = "4.5.36", features = ["derive"] }

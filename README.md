@@ -4,3 +4,4 @@
 - [ ] temperature converter
 - [ ] fibonacci sequence
 - [ ] "twelve days of christmas"
+- [ ] fizzbuzz
